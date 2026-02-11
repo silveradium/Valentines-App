@@ -1,14 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playpen_Sans, Rubik_Dirt } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playpenSans = Playpen_Sans({
+  variable: "--font-cute",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const rubikDirt = Rubik_Dirt({
+  variable: "--font-rubik",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata = {
@@ -19,9 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${playpenSans.variable} ${rubikDirt.variable} antialiased`}>
         {children}
       </body>
     </html>
